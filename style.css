@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body { 
+    width: 100%;
+    height: 100vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 9px;
+}
+
+/* Calculator Container */
+.calculator {
+    border: 12px solid #f2f3f5;
+    border-radius: 16px;
+    padding: 38px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+    width: 90%;
+    max-width: 360px;  /* Prevents it from becoming too wide */
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    border: 6px solid #f2f3f5;
+    border-radius: 6px;
+    color: #f2f3f5;
+    font-size: 24px;
+    padding: 12px;
+}
+
+/* Input Field */
+input {
+    width: 100%;
+    border: 6px solid #f2f3f5;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+    font-size: 32px;
+    text-align: right;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Buttons */
+button {
+    border: 6px double #f2f3f5;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Special Buttons */
+.equal-btn {
+    background-color: #e52d2d;
+}
+
+.opert-btn {
+    background-color: #e52d2d;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input {
+        font-size: 28px;
+        padding: 14px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .buttons {
+        grid-template-columns: repeat(3, 1fr); /* 3 buttons per row for small screens */
+    }
+}
